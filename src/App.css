@@ -1,0 +1,848 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ede0cf;
+  color: #333;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 🟡 HERO */
+.hero {
+  background: 
+  
+    url('../public/images/golf-miramas.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 40px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+  }
+
+  .hero-text-box {
+    
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+  
+ 
+.hero-text-box h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+  
+.description-box {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff8f0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color:#5a2e2e;
+  border: 1px solid #f0d2b2;
+}
+.photo-placeholder {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* 🟡 FORMULAIRE */
+.form-section {
+  background-color: #fff8f0;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid #f0d2b2;
+  border-radius: 12px;
+}
+
+.form-section h2 {
+  text-align: center;
+  color: #5a2e2e;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input,
+button,
+.react-datepicker-wrapper {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus,
+.react-datepicker-wrapper:focus-within {
+  border-color: #c97d60;
+}
+
+button {
+  background-color: #c97d60;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #a75a42;
+}
+
+/* 🟡 CALENDRIER (react-datepicker) */
+.react-datepicker {
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.react-datepicker__day--highlighted {
+  background-color: #c97d60;
+  color: white;
+}
+
+.react-datepicker__day--disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* 🟡 LISTE DE RÉSERVATIONS */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+li {
+  background-color: #fff;
+  border: 1px solid #e0cfc2;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 🟡 CARROUSEL slick */
+.carousel-section {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.carousel-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5a2e2e;
+}
+
+.slick-slide img {
+  width: 90%;
+  max-width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+ 
+}
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+.apt-photo {
+  width: 100%;
+  max-width: 600px; /* limite la taille affichée */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.photo-placeholder {
+  margin: 40px auto;
+  max-width: 1250px;
+}
+.photo-placeholder h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6b4f35;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .form-section {
+    padding: 1rem;
+  }
+}
+.error-message {
+  color: #b60000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.admin-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.admin-login input {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.admin-login button {
+  background-color: #ce7a5d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-reservations ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 700px;
+  margin: auto;
+}
+
+.admin-reservations li {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.admin-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #fdfaf6;
+  color: #333;
+}
+
+.admin-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.admin-login input {
+  padding: 0.6rem;
+  width: 250px;
+  margin-right: 1rem;
+}
+
+.admin-login button {
+  padding: 0.6rem 1.2rem;
+  background-color: #c8755c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: darkred;
+  margin-top: 1rem;
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-section {
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.admin-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.admin-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* Corrige la couleur des textes du calendrier */
+.react-calendar,
+.react-calendar * {
+  color: #333 !important;
+}
+
+/* Améliore l'affichage global */
+.react-calendar {
+  background-color: #fffdf9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Surlignage des jours sélectionnés */
+.react-calendar__tile--active {
+  background: #facc15 !important;
+  color: #000 !important;
+}
+
+/* Surlignage des jours désactivés (réservés) */
+.react-calendar__tile:disabled {
+  background: #f87171 !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+.success-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0fff0;
+  padding: 20px;
+}
+
+.success-card {
+  background-color: white;
+  border: 2px solid #4caf50;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.checkmark {
+  font-size: 50px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.cancel-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fef2f2;
+}
+
+.cancel-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.cancel-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #dc2626; /* rouge vif */
+}
+
+.cancel-card h1 {
+  color: #b91c1c;
+  margin-bottom: 1rem;
+}
+
+.cancel-card p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.cancel-card button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ef4444;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cancel-card button:hover {
+  background-color: #b91c1c;
+}
+.download-pdf-button {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.download-pdf-button:hover {
+  background-color: #059669;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.admin-hidden-trigger {
+  background: none;
+  border: none;
+  color: transparent;
+  font-size: 1px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.admin-reveal {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.admin-reveal:hover {
+  opacity: 1;
+}
+.paid-status {
+  color: green;
+  font-weight: bold;
+  margin-top: 5px;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .reservation-card, .reservation-card * {
+    visibility: visible;
+  }
+
+  .reservation-card {
+    page-break-after: always;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .print-button, .delete-button {
+    display: none;
+  }
+}
+.admin-card {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.caption {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #444;
+}
+.options-disponibles {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff8f0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+.options-disponibles p {
+  margin: 0.5rem 0;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espace entre logo et texte à droite */
+  background: linear-gradient(90deg, #f4e1c1, #d2b48c);
+  padding: 10px 40px;
+  color: #4b3832;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.logo-container {
+  flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+.site-logo {
+  height: 100px; /* plus grand */
+  width: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.site-info {
+  flex: 1; /* occupe tout l'espace restant */
+  text-align: center; /* centre le texte à l'intérieur */
+}
+.site-title {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  margin: 0;
+  color: #ad743f;
+ 
+
+}
+
+.site-contact {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  color: #5c4033;
+}
+
+
+/* ✅ Responsive pour petits écrans */
+@media (max-width: 768px) {
+  .site-header {
+    justify-content: center; /* centrer le contenu */
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .logo-container {
+    margin-right: 0;
+    margin-bottom: 10px; /* espace entre logo et texte */
+  }
+
+  .site-logo {
+    height: 80px; /* un peu plus petit sur mobile */
+  }
+
+  .site-info {
+    text-align: center; /* centrer le texte sous le logo */
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+    
+  }
+
+  .site-contact {
+    font-size: 0.9rem;
+  }
+}
+.reservation-formules .formules-grid {
+ display: flex;
+  justify-content: center;
+  gap: 20px; 
+  flex-wrap: nowrap; 
+}
+.reservation-formules {
+  text-align: center; /* tout le contenu de la section sera centré */
+  margin-top: 40px;
+}
+.reservation-formules h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6b4f35;
+  margin-bottom: 10px;
+}
+
+.reservation-formules p {
+  font-size: 1rem;
+  color: #5c4033;
+  margin-bottom: 20px;
+}
+.formule-card {
+  background: #fff8f0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 250px; /* largeur fixe pour bien aligner */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.formule-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.formule-card h3 {
+  color: #6b4f35;
+  margin: 10px 0;
+  text-align: center;
+}
+.formule-price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+
+
+.menu-photo {
+  display: block;
+  margin: 20px auto; /* centre horizontalement */
+  width: 100%;        /* largeur à 90% du conteneur */
+  max-width: 1200px; /* limite la largeur */
+  height: 550px;      /* conserve les proportions */
+  border-radius: 8px;
+  object-fit: cover; /* si jamais tu veux recadrer */
+}
+
+.cartes-menu {
+  margin: 50px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.cartes-menu h2 {
+  font-size: 2rem;
+  color: #6b4f35;
+  margin-bottom: 20px;
+}
+
+.cartes-menu p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+   color: #5c4033;
+}
+.menu-image {
+  display: block;
+  margin: 20px auto;      /* centre l'image */
+  width: 100%;             /* prend 90% de la largeur du conteneur */
+  max-width: 1200px;      /* limite la largeur maximum */
+  height:550px;           /* garde les proportions sans trop étirer la hauteur */
+  border-radius: 8px;
+ 
+}
+
+.cartes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu-card {
+  background: #fff8f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+  overflow: hidden; 
+  transition: transform 0.2s ease-in-out;
+   cursor: zoom-in;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+   object-fit: contain; 
+ 
+}
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.zoom-content {
+  max-width: 600px;     /* ✅ largeur max */
+  max-height: 80vh;     /* ✅ hauteur max */
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  overflow: hidden;     /* cache les dépassements */
+}
+
+.zoom-content img {
+  display: block;
+  max-width: 100%;      /* ne dépasse pas le conteneur */
+  max-height: 80vh;     /* limite la hauteur */
+  height: auto;
+  object-fit: contain;  /* garde les proportions */
+}
+.formulaire-rapide {
+  background: #fff8f0;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e2c68c;
+  max-width: 900px; /* limite la largeur du cadre */
+  margin: 30px auto; /* centre le bloc */
+}
+
+.formulaire-titre {
+  text-align: center; /* centre le titre */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5c4033;
+  margin-bottom: 15px;
+}
+
+.formulaire-rapide p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #5c4033;
+}
+
+.field-row {
+  display: flex;
+  gap: 20px; /* espace entre les inputs */
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* si petit écran ça passe en ligne */
+  justify-content: center; /* centre les lignes */
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px; /* largeur mini 200px, s’adapte */
+  max-width: 350px; /* réduit la longueur max */
+}
+
+.field-group.full-width {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.field-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #5c4033;
+}
+
+.field-group input,
+.field-group select {
+  padding: 10px;
+  border: 1px solid #d4b87c;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.field-group input:focus,
+.field-group select:focus {
+  border-color: #b4884c;
+  outline: none;
+  box-shadow: 0 0 4px rgba(107,79,53,0.2);
+}
+
+.formules-rapide-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formules-rapide-actions button {
+  background: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.formules-rapide-actions button:hover {
+  background: #218838;
+}
+
